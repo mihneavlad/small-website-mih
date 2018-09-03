@@ -12,7 +12,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "dev-dependencies": {
+  "devDependencies": {
     "react-scripts": "1.1.5"
   }
 }

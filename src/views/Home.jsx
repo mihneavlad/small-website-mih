@@ -1,14 +1,10 @@
 import React, {Fragment} from 'react';
 
+import Header from '../components/Header'
 
 const Home = (props) => (
   <Fragment>
-    <h1>Mihnea's Website</h1>
-    <ul>
-      <li>Home</li>
-      <li>About</li>
-      <li>Contact</li>
-    </ul>
+    <Header/>
   </Fragment>
 )
 

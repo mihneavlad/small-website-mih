@@ -1,6 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import './App.css';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
+
+import Header from './components/Header';
+import Footer from './components/Footer';
+
 
 import Home from './views/Home';
 import About from './views/About';
@@ -11,12 +15,18 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <Switch>
-          <Route exact path="/" component={Home}/>
-          <Route exact path="/about" component={About}/>
-          <Route exact path="/contact" component={Contact}/>
-          <Route component={NotFound}/>
-        </Switch>
+        <Fragment>
+          <Header />
+          <main>
+            <Switch>
+              <Route exact path="/" component={Home}/>
+              <Route exact path="/about" component={About}/>
+              <Route exact path="/contact" component={Contact}/>
+              <Route component={NotFound}/>
+            </Switch>
+          </main>
+          <Footer />
+        </Fragment>
       </BrowserRouter>
     );
   }
